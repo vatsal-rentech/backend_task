@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Assignment</title>
+    <style>.errorlist{
+        list-style-type: none;
+        color: red;
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+    }</style>
+</head>
+<body>
+    <form action="" method="POST" nonvalidation> {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Create Assignment"></input>
+    </form>
+</body>
+</html>

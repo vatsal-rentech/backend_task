@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        .errorlist{
+            list-style-type: none;
+            color: red;
+            font-size: 10px;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="POST" novalidate>{% csrf_token %}
+        <!-- {{form.non_field_errors}}
+        {% for field in form %}
+        {{field.label_tag}} {{field}} <span class="errorlist">{{field.errors}}</span><br>
+        {% endfor %} -->
+        {{form.as_p}}
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
